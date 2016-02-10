@@ -11,8 +11,8 @@ namespace cis237inclass3
         static void Main(string[] args)
         {
             //Create a couple of instances of the Employee class
-            Employee employee1 = new Employee("Dave", "Barnes", 537.00m);
-            Employee employee2 = new Employee("Joe", "Somebody", 125.50m);
+            Employee employee1 = new Employee("Dave", "Barnes");
+            Employee employee2 = new Employee("Joe", "Somebody");
 
             //Creat simple int that will be used for value vs reference
             int myNumber = 5;
@@ -33,21 +33,21 @@ namespace cis237inclass3
             //Showing how to use an array with objects
             Employee[] employees = new Employee[10];
 
-            /*
+            
             //Instanciate some employees into the array
-            employees[0] = new Employee("James", "Kirk", 453.00m);
-            employees[1] = new Employee("Jean-Luc", "Picard", 290.00m);
-            employees[2] = new Employee("Benjamin", "Sisko", 587.00m);
-            employees[3] = new Employee("Kathryn", "Janeway", 194.00m);
-            employees[4] = new Employee("Johnathan", "Archer", 394.00m);
-            */
+            employees[0] = new Employee("James", "Kirk");
+            employees[1] = new Employee("Jean-Luc", "Picard");
+            employees[2] = new Employee("Benjamin", "Sisko");
+            employees[3] = new Employee("Kathryn", "Janeway");
+            employees[4] = new Employee("Johnathan", "Archer");
+            
 
             //Lets use the new CSVProcessor we made!
-            CSVProcessor csvProcesor = new CSVProcessor();
+            //CSVProcessor csvProcesor = new CSVProcessor();
 
             //Call the ImportCSV method passing the path, and the employees array
             //over so they can be used.
-            csvProcesor.ImportCSV("../data/employees.csv", employees);
+            //csvProcesor.ImportCSV("../data/employees.csv", employees);
 
             //A for each loop that will loop through each element of the employees array
             foreach (Employee employee in employees)
