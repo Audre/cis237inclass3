@@ -41,11 +41,11 @@ namespace cis237inclass3
 
             
             //Instanciate some employees into the array
-            employees[0] = new Employee("James", "Kirk");
-            employees[1] = new Employee("Jean-Luc", "Picard");
-            employees[2] = new Employee("Benjamin", "Sisko");
-            employees[3] = new Employee("Kathryn", "Janeway");
-            employees[4] = new Employee("Johnathan", "Archer");
+            employees[0] = new HourlyEmployee("James", "Kirk", 12.05m);
+            employees[1] = new SalaryEmployee("Jean-Luc", "Picard", 55123.00m);
+            employees[2] = new HourlyEmployee("Benjamin", "Sisko", 14.56m);
+            employees[3] = new SalaryEmployee("Kathryn", "Janeway", 67000);
+            employees[4] = new SalaryEmployee("Johnathan", "Archer", 12000);
             
 
             //Lets use the new CSVProcessor we made!
