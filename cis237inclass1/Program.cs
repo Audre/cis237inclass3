@@ -14,28 +14,6 @@ namespace cis237inclass3
             Employee employee1 = new Employee("Dave", "Barnes");
             Employee employee2 = new Employee("Joe", "Somebody");
 
-            // Make a new Salary Employee
-            SalaryEmployee salaryEmployee1 = new SalaryEmployee("David", "Barnes", 55000m);
-            // Make a new Hourly Employee
-            HourlyEmployee hourlyEmployee1 = new HourlyEmployee("John", "Criton", 12.13m);
-
-
-            //Creat simple int that will be used for value vs reference
-            int myNumber = 5;
-
-            //Write the value of the int before the method, call the method, print after call.
-            Console.WriteLine(myNumber);
-            changeAnInt(myNumber);
-            Console.WriteLine(myNumber);
-
-            //Write the value of the employee before the method, call the method, print after call.
-            Console.WriteLine(employee1.ToString());
-            changeAnObject(employee1);
-            Console.WriteLine(employee1.ToString());
-            
-            //Console.WriteLine(employee.GetFullName());
-            //Console.WriteLine(employee.ToString());
-
             //Showing how to use an array with objects
             Employee[] employees = new Employee[10];
 
@@ -52,35 +30,6 @@ namespace cis237inclass3
             employees[7] = new HourlyEmployee("Benjamin", "Sisko", 14.56m);
             employees[8] = new SalaryEmployee("Kathryn", "Janeway", 67000);
             employees[9] = new SalaryEmployee("Johnathan", "Archer", 12000);
-            
-
-            //Lets use the new CSVProcessor we made!
-            //CSVProcessor csvProcesor = new CSVProcessor();
-
-            //Call the ImportCSV method passing the path, and the employees array
-            //over so they can be used.
-            //csvProcesor.ImportCSV("../data/employees.csv", employees);
-
-            //A for each loop that will loop through each element of the employees array
-            foreach (Employee employee in employees)
-            {
-                //Check to make sure that the current object is not null.
-                //we know that the first 5 have values because we assigned them right above
-                //but the last 5 are null, so we better put in a check.
-                if (employee != null)
-                {
-                    //output the information of the employee
-                    Console.WriteLine(employee.ToString());
-                }
-            }
-
-            // Print out the new subClasses of Employee
-            Console.WriteLine();
-            Console.WriteLine(salaryEmployee1.ToString());
-            Console.WriteLine();
-
-            Console.WriteLine(hourlyEmployee1.ToString());
-            Console.WriteLine();
 
             //We are creating a new UserInterface class, and it's okay
             //that the UserInterface class does not have a defined
@@ -136,26 +85,6 @@ namespace cis237inclass3
             }
 
 
-
-
-
         }
-
-        //This method takes in a integer, which is passed by value
-        //and then changes the value of it.
-        static void changeAnInt(int myNumber)
-        {
-            myNumber = 456;
-        }
-
-        //This method takes in a Employee class, which is passed by reference
-        //and then changes a property of it.
-        static void changeAnObject(Employee employee)
-        {
-            employee.FirstName = "Thor";
-        }
-
-
-
     }
 }
