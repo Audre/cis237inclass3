@@ -38,5 +38,13 @@ namespace cis237inclass3
         {
             return base.ToString() + " " + this.Salary.ToString("c");
         }
+
+        // This is the override for the abstract method we have declared in the
+        // Employee class. We are required to provide an implementation since it 
+        // was declared abstract in Employee.
+        public override string GetFormattedSalary()
+        {
+            return this.Salary.ToString("C");
+        }
     }
 }
