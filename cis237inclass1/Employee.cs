@@ -8,7 +8,7 @@ namespace cis237inclass3
 {
     // This is an abstract class. It is made abstract by adding the 'abstract' keyword
     // before the word class. 
-    abstract class Employee : IEmployee
+    public abstract class Employee : IEmployee
     {
         //Backing fields
         protected string firstName;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace cis237inclass3
 {
     // use the : to denote that this class should inherit from the class listed after the :
-    class SalaryEmployee : Employee
+    public class SalaryEmployee : Employee
     {
         // Add backing field for the salary
         private decimal salary;
